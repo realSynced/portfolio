@@ -6,6 +6,8 @@ body {
 
 
 
+
+
 header {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -74,6 +76,16 @@ header {
     animation-delay: 0s;
     animation-iteration-count: infinite;
     animation-duration: 6s;
+}
+
+@media only screen and (max-width: 600px) {
+    #running {
+        display: none;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
 }
 
 
