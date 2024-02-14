@@ -2,146 +2,290 @@ body {
     /* background-color: black; */
     margin: 0%;
     overflow-x: hidden;
-}
-
-
-
-
-
-header {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 40px;
-    padding-top: 180px;
-    padding-bottom: 250px;
-    text-align: center;
+    background-color: rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
     color: white;
-    background-color: black;
-    
 }
 
-#marq {
-    /* padding-top: 4px; */
-    font-weight: normal;
-    font-size: 20px;
-    user-select: none;
+a {
+    text-decoration: none;
 }
 
-#marq:hover{
-    color: aqua;
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(61, 61, 61); 
+    border-radius: 10px;
+}
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(78, 78, 78); 
+    border-radius: 10px;
+}
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3d3d3d; 
+}
+
+.intro-div{
+    display: flex;
+    /* flex-direction: row; */
+    flex-flow: row nowrap;
+    margin-top: 0;
+    margin-left: 25%;
+    font-size: 1em;
+    color: white;
+}
+
+.intro-div p {
+    margin-left: 10%;
+    text-align: center;
+}
+
+.intro-div a {
+    color: white;
+}
+
+#item-0 {
+    /* float: left; */
+    margin-left: -40vw;
+}
+
+
+#item-1, #item-2, #item-3{
+    animation-duration: 10s;    
+}
+
+#item-1{
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    /* animation-delay: 0s; */
+}
+
+#item-2{
+    animation-name: slidein2;
+    animation-iteration-count: infinite;
+    /* animation-delay: 6s; */
+}
+
+#item-3{
+    animation-name: slidein3;
+    animation-iteration-count: infinite;
+    /* animation-delay: 6s; */
+}
+
+#item-4{
+    /* display: ; */
+    margin-right: -65vw;
+}
+  
+@keyframes slidein {
+    0%, 8.3% {
+      transform: translateY(-200%);
+      opacity: 0;
+    }
+    8.3%,25% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    33.33%, 100% {
+      transform: translateY(200%);
+      opacity: 0;
+    }
+}
+
+@keyframes slidein2 {
+    0%, 33.33% {
+      transform: translateY(-200%);
+      opacity: 0;
+    }
+    41.63%, 58.29% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    66.66%, 100% {
+      transform: translateY(200%);
+      opacity: 0;
+    }
+}
+
+@keyframes slidein3 {
+    0%, 66.66% {
+      transform: translateY(-200%);
+      opacity: 0;
+    }
+    74.96%, 91.62% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    100% {
+      transform: translateY(200%);
+      opacity: 0;
+    }
+}
+
+
+
+/* Navigation bar */
+
+.navbar {
+    border-top: #fff 2px solid;
+    border-color: white;
 }
 
 .navbar {
-    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: larger;
 }
 
-.navbar ul{
-    overflow: hidden;
-    list-style: none;
-    background-color: none;
-    padding: 20px 20px;
-    margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: large;
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
-.navbar a{
-    color: white;
+
+.navbar li {
+    display: inline;
+    padding: 0 1.5%;
+}
+
+.navbar a {
     text-decoration: none;
-    padding: 15px;
-    display: block;
-    text-align: center;
-    border-radius: 10px;
-}
-
-.navbar li{
-    float: left;
-}
-
-/* About Me */
-
-.sect {
-    background-color: white;
-    background-image: url("https://ak.picdn.net/shutterstock/videos/1106785481/thumb/1.jpg");
-    background-size: cover;
-    height: 30rem;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-#running {
-    transform: translate(85rem, -2.2rem);
-
-    animation: manRunSlide;
-    animation-play-state: running;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-duration: 6s;
-}
-
-@media only screen and (max-width: 600px) {
-    #running {
-        display: none;
-    }
-
-    body {
-        overflow-x: hidden;
-    }
-}
-
-
-
-.about {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    text-align: center;
-}
-
-.descr-me p{
-    text-align: center;
-    justify-content: baseline;
-    text-shadow: 1px 1px 10px hsla(184, 100%, 50%, 0.171);
-}
-
-
-
-
-
-/* Work Section */
-
-.work{
-    background-color: black;
-    height: 38rem;
-}
-
-#workhead {
-    padding-top: 30px;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 40px;
+}
+
+.navbar a:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
+/*  */
+
+.intro {
+    height: 25rem;
+}
+
+.quote {
+    height: 5px;
+    margin-top: 10%;
+    margin-left: 10%;
+    color: white;
+}
+
+.qt {
+    display: inline-block;
+}
+
+.quote p {
+    font-size: 2em;
+    font-weight: 100;
+    user-select: none;
+}
+.quote img {
+    width: 15rem;
+    margin-left: 10%;
+}
+
+.work {
+    height: 40%;
+}
+
+.head p{
+    margin-top: 4rem;
+    font-size: 2em;
     text-align: center;
 }
 
-/* Work Images Section */
-
-.work img {
-    border-radius: 40px;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    margin-top: 40px;
-    margin-left: 10%;
+.webshow {
+    display: flex;
+    width: 83rem;
+    justify-content: center;
+    align-content: center;
+    user-select: none;
 }
 
-#kidd-desc {
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 10%;
+.webshow a {
+    color: rgb(176, 176, 176);
 }
 
+.workshow {
+    position: relative;
+    width: 40rem;
+    max-width: 40%;
+    margin-top: 5%;
+    margin-left: 1%;
+}
 
-@keyframes manRunSlide {
-    from{margin-left: 0%;}
-    to{margin-left: -120%;}
+.img_title_desc{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 40%;
+    position: absolute;
+    
+    color: #fff;
+    opacity: 0;
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    /* transition effect. not necessary */
+    transition: opacity .5s, visibility .5s;
+}
 
+.workshow:hover .img_title_desc {
+    visibility: visible;
+    opacity: 1;
+}
+
+.img_description {
+    width: 30rem;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15%;
+    color: rgb(176, 176, 176);
+    text-shadow: 0px 2px 10px #3d3d3d;
+    transition: .5s;
+    transform: translateY(1em);
+}
+
+#underttl {
+    font-size: 1.2rem;
+    margin-top: -12%;
+}
+
+.workshow:hover .img_description {
+    transform: translateY(0);
+}
+
+.workshow img {
+    width: 40rem;
+    max-width: 100%;
+    transition: filter 0.5s ease;
+}
+
+.workshow:hover #imgs {
+    filter: blur(2.5px);
+}
+
+/* Footer */
+
+.footer {
+    /* position: fixed; */
+    /* top: 90%; */
+    border-top: #fff 2px solid;
+}
+
+.foot-note {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
 }
